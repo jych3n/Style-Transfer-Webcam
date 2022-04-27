@@ -4,12 +4,10 @@ let result;
 
 function setup() {
   createCanvas(640, 480).parent('canvas');
-
   video = createCapture(VIDEO);
   video.hide();
   result = createImg('');
   result.hide();
-  var m = document.getElementById("mymenu");
   var model = 'models/wave';
   document.getElementById("wave").onclick = function () {style = ml5.styleTransfer('models/wave', video, modelLoaded);};
   document.getElementById("fuji").onclick = function () {style = ml5.styleTransfer('models/fujichoco', video, modelLoaded);};
